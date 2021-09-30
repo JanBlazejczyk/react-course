@@ -1,0 +1,14 @@
+{
+  "name": "leapyear",
+  "version": "1.0.0",
+  "description": "program displaying in the console if the year is leap or not",
+  "main": "leapYear.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan",
+  "license": "ISC",
+  "dependencies": {
+    "@stdlib/assert-is-leap-year": "^0.0.7"
+  }
+}
