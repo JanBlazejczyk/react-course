@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan",
-  "license": "ISC",
-  "dependencies": {
-    "@stdlib/assert-is-leap-year": "^0.0.7"
-  }
+  "license": "ISC"
 }

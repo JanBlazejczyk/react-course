@@ -1,10 +1,18 @@
-const YEAR = 1988;
-const checkLeap = require('@stdlib/assert-is-leap-year');
+const YEAR = 2000;
+// const checkLeap = require('@stdlib/assert-is-leap-year');
 
-if (checkLeap(YEAR)) {
-    console.log(`The year ${YEAR} is leap`);
-} else {
-    console.log(`The year ${YEAR} is not leap`);
+const checkLeap = (year) => {
+    if (typeof year === "number") {
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+            console.log(`The year ${year} is leap`);
+        } else {
+            console.log(`The year ${year} is not leap`);
+        }
+    } else {
+        console.log("Year must be a number!");
+    }
 }
+
+checkLeap(YEAR);
 
 
