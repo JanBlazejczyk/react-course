@@ -22,7 +22,7 @@ Textarea.defaultProps = {
   color: "#293241",
   borderSize: "0px",
   borderRadius: "1rem",
-  borderColor: "#293241"
+  borderColor: "#FFE5D9"
 };
 
 export default Textarea;

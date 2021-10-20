@@ -2,12 +2,13 @@ const styles = {
   display: "flex",
   flexDirection: "column",
   width: "350px",
-  marginTop: "20px",
+  margin: "20px",
   border: "solid",
   borderRadius: "10px",
   backgroundColor: "#D8E2DC",
   padding: "10px",
-  borderColor: "#FFE5D9"
+  borderColor: "#FFE5D9",
+  boxSizing: "border-box"
 };
 
 function Form({ children }) {

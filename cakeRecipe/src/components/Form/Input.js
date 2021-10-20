@@ -4,11 +4,11 @@ function Input({ bgColor, color, borderSize, borderRadius, borderColor }) {
       type="text"
       style={{
         // props
-        backgroundColor: `${bgColor}`,
-        color: `${color}`,
-        borderRadius: `${borderRadius}`,
-        borderColor: `${borderColor}`,
-        borderWidth: `${borderSize}`,
+        backgroundColor: bgColor,
+        color: color,
+        borderRadius: borderRadius,
+        borderColor: borderColor,
+        borderWidth: borderSize,
         // own styles
         padding: 10,
         opacity: 0.8,
@@ -23,7 +23,7 @@ Input.defaultProps = {
   color: "#293241",
   borderSize: "0px",
   borderRadius: "0.7rem",
-  borderColor: "#293241"
+  borderColor: "#FFE5D9"
 };
 
 export default Input;
