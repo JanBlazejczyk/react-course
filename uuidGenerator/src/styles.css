@@ -1,0 +1,39 @@
+.App {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #9b5de5;
+  color: #00f5d4;
+  letter-spacing: 3.5vw;
+  /* margin: 1rem; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.UUIDcode {
+  letter-spacing: 0.5vw;
+  color: #fee440;
+}
+
+.btn {
+  padding: 0.5rem;
+  background-color: #00f5d4;
+  color: #9b5de5;
+  border: none;
+  border-radius: 0.5em;
+  font-weight: 1000;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #fee440;
+}
