@@ -1,0 +1,17 @@
+@import '../../utils';
+
+.search-bar {
+  width: 100%;
+  padding: 20px 0 20px 0;
+  background-color: $search-box-background-color;
+
+  &__input {
+    @extend %search-bar-elems
+  }
+
+  &__button {
+    @extend %search-bar-elems;
+    cursor: pointer;
+  }
+}
+

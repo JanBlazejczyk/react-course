@@ -1,0 +1,24 @@
+form,
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  border: solid;
+}
+
+/* select */
+#tip-select {
+  margin: 5px;
+}
+
+/* button */
+.btn {
+  margin: 5px;
+}
+
+/* Input */
+.num-input {
+  margin: 5px;
+}

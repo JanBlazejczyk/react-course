@@ -1,0 +1,26 @@
+@import '../../utils';
+
+.user-profile {
+  @extend %user-container;
+  margin-top: 50px;
+  width: 50%;
+
+  &__label {
+    font-weight: $font-weight-bold;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon {
+    color: $user-border-color;
+    border-color: $user-background-color;
+  }
+}
+
+.icon-container {
+  height: 35px;
+  margin-top: 50px;
+}

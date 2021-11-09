@@ -1,0 +1,18 @@
+.button {
+  padding: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 0.5em;
+  border: none;
+  margin: 5px;
+
+  &--confirm {
+    background-color: green;
+  }
+  &--abort {
+    background-color: red;
+  }
+  &--close {
+    background-color: yellow;
+  }
+}

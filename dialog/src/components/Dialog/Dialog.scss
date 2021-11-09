@@ -1,0 +1,22 @@
+.dialog {
+  border: solid;
+  width: 30%;
+  height: auto;
+  border-radius: 0.4em;
+
+  &__header {
+    display: flex;
+
+    &--title {
+      text-align: left;
+      margin-left: 5%;
+    }
+  }
+
+  &__content {
+    text-align: left;
+    margin-left: 5%;
+  }
+}
+
+

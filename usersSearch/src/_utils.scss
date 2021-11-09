@@ -1,0 +1,35 @@
+/* Main */
+$main-background-color: #E3F09B;
+$font-weight-bold: 800;
+
+/* SearchBar*/
+$search-box-background-color: #87B6A7;
+$search-box-input-background-color: #E3F09B;
+$search-box-text-color: #5B5941;
+
+%search-bar-elems {
+    border: none;
+    border-radius: 0.3em;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: $search-box-input-background-color;
+    color: $search-box-text-color;
+    font-weight: 800;
+}
+
+/* User */
+$user-text-color: #604d53;
+$user-background-color: #F7D08A;
+$user-border-color: #F79F79;
+
+%user-container {
+border: solid;
+  border-radius: 0.5em;
+  text-align: left;
+  padding: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: $user-background-color;
+  border-color: $user-border-color;
+  color: $user-text-color;
+}

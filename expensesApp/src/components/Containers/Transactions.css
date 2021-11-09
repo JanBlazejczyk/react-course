@@ -1,0 +1,5 @@
+.transactions__container {
+  display: flex;
+  width: 100vw;
+  background-color: #3d405b;
+}

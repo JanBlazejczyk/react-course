@@ -1,0 +1,15 @@
+@import '../../utils';
+
+
+.user {
+  @extend %user-container; 
+  
+  &__label {
+    font-weight: $font-weight-bold;
+  }
+
+  &__link {
+    color: $user-text-color;
+    font-weight: $font-weight-bold;
+  }
+}

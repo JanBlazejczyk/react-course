@@ -1,0 +1,37 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-right: 0.3rem;
+}
+
+.form__gender--container,
+.form__clause--container,
+.form__error--container {
+  width: 15rem;
+  margin: 0.8rem;
+}
+
+.form__name,
+.form__email,
+.form__bio {
+  width: 15rem;
+  margin: 0.8rem;
+  padding: 0.5rem;
+}
+
+.form__radio,
+.form__checkbox {
+  margin-right: 0.5rem;
+}
+
+.form__submit {
+  width: 5rem;
+  padding: 0.5rem;
+}
+
+.form__submit--container {
+  text-align: center;
+}
