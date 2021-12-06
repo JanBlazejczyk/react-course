@@ -5,7 +5,7 @@ import { Snackbar } from "./components/Snackbar";
 import { Button } from "./components/Button";
 
 export default function App() {
-  const [SnackDisplay, setSnackDisplay] = useState(false);
+  const [snackDisplay, setSnackDisplay] = useState(false);
 
   const showSnack = () => {
     setSnackDisplay(true);
@@ -22,7 +22,7 @@ export default function App() {
       <Button handleClick={showSnack}>Show snack</Button>
       <Snackbar
         text="Snickers"
-        active={SnackDisplay}
+        active={snackDisplay}
         handleClose={hideSnack}
         time="6000"
         position="bottom-right"
