@@ -5,22 +5,22 @@ import { Result } from "../Result";
 
 class Form extends React.Component {
   state = {
-    display: "form",
+    showForm: true,
     netto: "",
     tip: ""
   };
 
   setDisplay = () => {
-    if (this.state.display === "form") {
-      this.setState({ display: "result" });
+    if (this.state.showForm) {
+      this.setState({ showForm: false });
     } else {
-      this.setState({ display: "form" });
+      this.setState({ showForm: true });
     }
   };
 
   resetState = () => {
     this.setState({
-      display: "form",
+      showForm: true,
       netto: "",
       tip: ""
     });
@@ -58,7 +58,7 @@ class Form extends React.Component {
   };
 
   render() {
-    if (this.state.display === "form") {
+    if (showForm) {
       return (
         <form>
           <h2>Calculate your cost</h2>
