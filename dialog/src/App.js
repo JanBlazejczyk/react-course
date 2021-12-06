@@ -6,7 +6,7 @@ import { Button } from "./components/Button";
 import { Dialog } from "./components/Dialog";
 
 export default function App() {
-  const [DialogActive, setDialogActive] = useState(false);
+  const [dialogActive, setDialogActive] = useState(false);
 
   const handleDialogOpen = () => {
     setDialogActive(true);
@@ -26,7 +26,7 @@ export default function App() {
       <Button handleClick={handleDialogOpen}>Open Dialog</Button>
       <Dialog
         title="I am dialog title"
-        active={DialogActive}
+        active={dialogActive}
         content="Example dialog content"
       >
         <Button confirm handleClick={handleConfirmClick}>
