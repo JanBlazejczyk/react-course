@@ -22,14 +22,10 @@ class Form extends React.Component {
   };
 
   addBorders = () => {
-    if (this.state.name === "") {
-      this.name.current.style.border = "#f00 solid 1px";
-    }
-    if (this.state.email === "") {
-      this.email.current.style.border = "#f00 solid 1px";
-    }
-    if (this.state.bio === "") {
-      this.bio.current.style.border = "#f00 solid 1px";
+    for (let property in this.state) {
+      if (this.state[property] === "" && property !== "gender") {
+        this[property].current.style.border = "#f00 solid 1px";
+      }
     }
   };
 
