@@ -5,15 +5,15 @@ import { Result } from "../Result";
 import { useInput, calculateBrutto } from "../../utils";
 
 function Form() {
-  const [display, setDisplay] = useState("form");
+  const [displayForm, setDisplayForm] = useState(true);
   const [netto, handleNettoChange] = useInput("");
   const [tip, handleTipChange] = useInput("");
 
   const toggleDisplay = () => {
-    if (display === "form") {
-      setDisplay("result");
+    if (displayForm) {
+      setDisplayForm(false);
     } else {
-      setDisplay("form");
+      setDisplayForm(true);
     }
   };
 
@@ -27,7 +27,9 @@ function Form() {
     toggleDisplay();
   };
 
-  if (display === "form") {
+  const tipValues = [5, 10, 15, 20];
+
+  if (displayForm) {
     return (
       <form>
         <h2>Calculate your cost</h2>
@@ -45,10 +47,9 @@ function Form() {
           onChange={handleTipChange}
         >
           <option value="">How much tip?</option>
-          <option value="5">5%</option>
-          <option value="10">10%</option>
-          <option value="15">15%</option>
-          <option value="20">20%</option>
+          {tipValues.map((value) => (
+            <option value={value}>{value}%</option>
+          ))}
         </select>
 
         <button onClick={handleClick}>Calculate</button>
