@@ -1,0 +1,11 @@
+@import '../../utils';
+
+.users-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr [col-start]);
+  grid-auto-rows: min-content;
+  grid-gap: 20px;
+  background-color: $main-background-color;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

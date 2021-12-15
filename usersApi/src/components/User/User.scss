@@ -1,0 +1,33 @@
+@import '../../utils';
+
+
+.user {
+  @extend %user-container; 
+  
+  &__label {
+    font-weight: $font-weight-bold;
+  }
+
+  &__link {
+    color: $user-text-color;
+    font-weight: $font-weight-bold;
+  }
+
+  &__line {
+    display: block;
+    margin: 1rem 0 0 0.6rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $main-background-color;
+
+
+    &--username {
+      font-weight: bold;
+      margin-left: 20px;
+    }
+  }
+}

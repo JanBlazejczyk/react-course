@@ -1,0 +1,11 @@
+.movies__container--main {
+  display: flex;
+  width: 100%;
+}
+
+.movies__container--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
