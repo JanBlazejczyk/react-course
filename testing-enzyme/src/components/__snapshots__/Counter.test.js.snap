@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Counter component shall component render correctly 1`] = `
+exports[`Counter component should component render correctly 1`] = `
 <div>
   <div
     className="counter-value"
@@ -8,7 +8,10 @@ exports[`Counter component shall component render correctly 1`] = `
     0
   </div>
   <input
+    className="counter-input"
+    onChange={[Function]}
     type="number"
+    value={0}
   />
   <button
     onClick={[Function]}

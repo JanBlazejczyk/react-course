@@ -9,7 +9,7 @@ import Button from "./Button";
 
 describe("Counter component", () => {
 
-    it("shall component render correctly", () => {
+    it("should component render correctly", () => {
         const CounterComponent = renderer.create(<Counter />).toJSON();
         expect(CounterComponent).toMatchSnapshot();
     });
@@ -57,11 +57,36 @@ describe("Counter component", () => {
 
     it("should the counter state change when the change button is clicked", () => {
         // value of the input field is not the value of the counter
+        const wrapper = mount(<Counter />);
+
+        // change the value in the input field to 20
+        const input = wrapper.find(".counter-input");
+        input.simulate('change', { target: { value: "20" } });
+
+        // before the button is clicked the counter value is 0
+        const counterValue = wrapper.find(".counter-value");
+        expect(counterValue.text()).toEqual("0");
+
         // the button is clicked
+        const changeButton = wrapper.find(".change-btn");
+        changeButton.simulate("click");
+
         // value of the input field is the value of the counter
+        expect(counterValue.text()).toEqual("20");
     });
 
-    it("should the counter value = start after reset button is clicked", () => {
+    it("should the counter value == start after reset button is clicked", () => {
+        const wrapper = mount(<Counter start="10" />);
+        const counterValue = wrapper.find(".counter-value");
+        const resetButton = wrapper.find(".reset-btn");
+        const incrementButton = wrapper.find(".increment-btn");
 
+        // change the value of the counter to other than initial
+        incrementButton.simulate("click");
+        expect(counterValue.text()).toEqual("11");
+
+        // click the reset button and assume that it has the value of the start prop
+        resetButton.simulate("click");
+        expect(counterValue.text()).toEqual("10");
     });
 })

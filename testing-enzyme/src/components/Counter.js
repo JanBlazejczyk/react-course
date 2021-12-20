@@ -1,12 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import Button from "./Button";
 
 function Counter({ start = 0 }) {
   const [counter, setCounter] = useState(0);
   const [initCounterValue, setInitCounterValue] = useState(start);
-
-  const inputRef = useRef();
+  const [inputValue, setInputValue] = useState(0);
 
   const handleIncrement = () => {
     setCounter(Number(counter) + 1);
@@ -17,12 +16,16 @@ function Counter({ start = 0 }) {
   }
 
   const handleChange = () => {
-    setCounter(inputRef.current.value);
-    setInitCounterValue(inputRef.current.value);
+    setCounter(inputValue);
+    setInitCounterValue(inputValue);
   }
 
   const handleReset = () => {
     setCounter(initCounterValue);
+  }
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
   }
 
   useEffect(() => {
@@ -32,7 +35,7 @@ function Counter({ start = 0 }) {
   return (
     <div>
       <div className="counter-value">{counter}</div>
-      <input type="number" ref={inputRef} />
+      <input className="counter-input" type="number" value={inputValue} onChange={handleInputChange} />
       <Button className="change-btn" label="Change" handleClick={handleChange} />
       <Button className="reset-btn" label="Reset" handleClick={handleReset} />
       <Button className="decrement-btn" label="-" handleClick={handleDecrement} />
