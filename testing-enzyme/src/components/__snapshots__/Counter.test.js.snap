@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Counter component should component render correctly 1`] = `
+exports[`Counter component should render correctly 1`] = `
 <div>
   <div
     className="counter-value"
